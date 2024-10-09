@@ -20,8 +20,16 @@ const UserModal = ({ onClose, member, onSave }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="fixed inset-0 bg-black opacity-50" onClick={onClose}></div>
+      <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white rounded-lg shadow-lg p-6 w-1/2 relative z-10">
+        <div className="flex justify-end mb-2">
+          <button
+            onClick={onClose}
+            className="text-red-500 text-2xl font-bold"
+          >
+            &times;
+          </button>
+        </div>
         <h1 className="text-2xl font-bold text-gray-800 mb-6">User Management</h1>
         <p className="text-xl font-bold text-gray-800 mb-6">User Information</p>
 

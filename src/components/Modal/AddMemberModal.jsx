@@ -9,14 +9,22 @@ const MemberModal = ({ onClose, member, onSave }) => {
   };
 
   const handleSave = () => {
-    onSave(formData);
-    onClose();
+    onSave(formData); // Call the onSave function passed from the parent
+    onClose(); // Close the modal after saving
   };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="fixed inset-0 bg-black opacity-50" onClick={onClose}></div>
+      <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white rounded-lg shadow-lg p-6 w-1/2 relative z-10">
+      <div className="flex justify-end mb-2">
+          <button
+            onClick={onClose}
+            className="text-red-500 text-2xl font-bold"
+          >
+            &times;
+          </button>
+        </div>
         <h1 className="text-2xl font-bold text-gray-800 mb-6">Membership</h1>
         <p className="text-xl font-bold text-gray-800 mb-6">Personal Information</p>
 
@@ -121,18 +129,18 @@ const MemberModal = ({ onClose, member, onSave }) => {
           </div>
         </div>
 
-        <div className="flex justify-between mt-6">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 w-1/2 mr-4"
-          >
-            Close
-          </button>
+        <div className="mt-6 flex justify-end">
           <button
             onClick={handleSave}
-            className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700 w-1/2 ml-4"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
           >
             Save
+          </button>
+          <button
+            onClick={onClose}
+            className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-700"
+          >
+            Cancel
           </button>
         </div>
       </div>

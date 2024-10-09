@@ -7,7 +7,7 @@ const MembershipInformationModal = ({ member, onClose }) => {
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
       <div className="bg-white p-8 rounded-lg shadow-lg overflow-auto">
-        <div className="flex justify-end mb-4">
+        <div className="flex justify-end mb-2">
           <button
             onClick={onClose}
             className="text-red-500 text-2xl font-bold"
@@ -21,22 +21,19 @@ const MembershipInformationModal = ({ member, onClose }) => {
             <img
               src={pic}
               alt="Profile"
-              className="w-32 h-32 rounded-full object-cover"
+              className="w-32 h-32 rounded-full object-cover mx-auto"
             />
             <h3 className="text-2xl font-bold mt-4">{member.fullName}</h3>
           </div>
-
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4">Member Information</h2>
             <div className="grid grid-cols-2">
               <div>
                 <p className="text-gray-700">
-                  <span className="font-bold">Membership ID:</span>{" "}
-                  {member.memberId}
+                  <span className="font-bold">Membership ID:</span> {member.memberId}
                 </p>
                 <p className="text-gray-700">
-                  <span className="font-bold">Member since:</span>{" "}
-                  {member.memberSince}
+                  <span className="font-bold">Member since:</span> {member.memberSince}
                 </p>
                 <p className="text-gray-700">
                   <span className="font-bold">Age:</span> {member.age}
@@ -56,7 +53,7 @@ const MembershipInformationModal = ({ member, onClose }) => {
             </div>
           </div>
         </div>
-
+        <hr className="border-t border-solid border-gray-400 my-4" />
         <div className="mt-8">
           <h3 className="text-2xl font-bold mb-4">Financial Information</h3>
           <div className="grid grid-cols-2 gap-4">

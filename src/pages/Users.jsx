@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaPlus, FaEye, FaTrash, FaEdit, FaSearch } from "react-icons/fa";
 import AddUserModal from "../components/Modal/AddUserModal"; 
-import UserInformationModal from "../components/Modal/MemberInformationModal";
+import UserInformationModal from "../components/Modal/MemberProfileModal";
 
 const Users = () => {
   const [isAddEditModalOpen, setIsAddEditModalOpen] = useState(false);
