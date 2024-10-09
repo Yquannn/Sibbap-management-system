@@ -6,7 +6,7 @@ const MembershipInformationModal = ({ member, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
-      <div className="bg-white p-8 rounded-lg shadow-lg overflow-auto w-3/4 md:w-1/2">
+      <div className="bg-white p-8 rounded-lg shadow-lg overflow-auto">
         <div className="flex justify-end mb-4">
           <button
             onClick={onClose}
@@ -28,7 +28,7 @@ const MembershipInformationModal = ({ member, onClose }) => {
 
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4">Member Information</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2">
               <div>
                 <p className="text-gray-700">
                   <span className="font-bold">Membership ID:</span>{" "}

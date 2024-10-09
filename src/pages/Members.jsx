@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaPlus, FaEye, FaTrash, FaEdit, FaSearch } from "react-icons/fa";
-import AddMemberModal from "../components/Modal/AddMemberModal"; // Modal for adding/editing members
-import MembershipInfomationModal from "../components/Modal/MemberInformationModal"; // Modal for viewing member details
+import AddMemberModal from "../components/Modal/AddMemberModal"
+import MembershipInformationModal from "../components/Modal/MemberInformationModal";
 
-const Member = () => {
+const Members = () => {
   const [isAddEditModalOpen, setIsAddEditModalOpen] = useState(false);
   const [isViewModalOpen, setIsViewModalOpen] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
@@ -36,15 +36,40 @@ const Member = () => {
       address: "Lipa",
       sharedCapital: 15000,
     },
+        {
+      memberId: "03218",
+      fullName: "Yquan Smith",
+      age: 21,
+      gender: "Male",
+      contact: "098-765-4321",
+      address: "Lipa",
+      sharedCapital: 15000,
+    },
+    {
+      memberId: "03218",
+      fullName: "Ian Mendoza",
+      age: 21,
+      gender: "Male",
+      contact: "098-765-4321",
+      address: "Lipa",
+      sharedCapital: 15000,
+    },
+    {
+      memberId: "03218",
+      fullName: "Yquan Smith",
+      age: 21,
+      gender: "Male",
+      contact: "098-765-4321",
+      address: "Lipa",
+      sharedCapital: 15000,
+    },
   ];
 
-  // Open modal for adding or editing a member
   const openAddEditModal = (member) => {
     setSelectedMember(member);
     setIsAddEditModalOpen(true);
   };
 
-  // Open modal for viewing member details
   const openViewModal = (member) => {
     setSelectedMember(member);
     setIsViewModalOpen(true);
@@ -79,7 +104,7 @@ const Member = () => {
         </div>
         <button
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700 flex items-center space-x-2"
-          onClick={() => openAddEditModal(null)} // null for adding a new member
+          onClick={() => openAddEditModal(null)} 
         >
           <FaPlus />
           <span>Add Member</span>
@@ -162,7 +187,7 @@ const Member = () => {
       )}
 
       {isViewModalOpen && (
-        <MembershipInfomationModal
+        <MembershipInformationModal
           member={selectedMember}
           onClose={closeModals}
         />
@@ -171,4 +196,4 @@ const Member = () => {
   );
 };
 
-export default Member;
+export default Members;

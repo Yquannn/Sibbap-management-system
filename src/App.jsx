@@ -5,7 +5,7 @@ import FileMaintenance from "./pages/FileMaintenance";
 import InvestmentSavings from "./pages/InvestmentSavings";
 import Loan from "./pages/Loan";
 import Maintenance from "./pages/Maintenance";
-import Member from "./pages/Member";
+import Members from "./pages/Members";
 import Membership from "./pages/Maintenance";
 import Report from "./pages/Report";
 import Users from "./pages/Users";
@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<RootLayout />}>
         <Route path="dashboard" element={<Dashboard />} /> 
-        <Route path="members" element={<Member />} /> 
+        <Route path="members" element={<Members />} /> 
         <Route path="membership" element={<Membership />} />
         <Route path="file-maintenance" element={<FileMaintenance />} />
         <Route path="maintenance" element={<Maintenance />} /> 
