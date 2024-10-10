@@ -17,6 +17,8 @@ const Members = () => {
       contact: "123-456-7890",
       address: "Tabangao",
       sharedCapital: 1000,
+      email: "johnDoe@gmail.com",
+      password: "hehehe"
     },
     {
       memberId: "210832",
@@ -26,6 +28,8 @@ const Members = () => {
       contact: "098-765-4321",
       address: "Batangas",
       sharedCapital: 1500,
+      email: "johnDoe@gmail.com",
+      password: "hehehe"
     },
     {
       memberId: "03218",
@@ -35,6 +39,8 @@ const Members = () => {
       contact: "098-765-4321",
       address: "Lipa",
       sharedCapital: 15000,
+      email: "johnDoe@gmail.com",
+      password: "hehehe"
     },
     {
       memberId: "03219",
@@ -44,6 +50,8 @@ const Members = () => {
       contact: "098-765-4321",
       address: "Lipa",
       sharedCapital: 15000,
+      email: "IanMendoza@gmail.com",
+      password: "hehehe"
     },
   ]);
 

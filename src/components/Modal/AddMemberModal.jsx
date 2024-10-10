@@ -17,7 +17,7 @@ const MemberModal = ({ onClose, member, onSave }) => {
     <div className="fixed inset-0 flex items-center justify-center z-50">
       <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white rounded-lg shadow-lg p-6 w-1/2 relative z-10">
-      <div className="flex justify-end mb-2">
+        <div className="flex justify-end mb-2">
           <button
             onClick={onClose}
             className="text-red-500 text-2xl font-bold"
@@ -100,6 +100,37 @@ const MemberModal = ({ onClose, member, onSave }) => {
               placeholder="Enter Shared capital"
               className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             />
+          </div>
+        </div>
+
+        <div className="mt-6">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">
+          Account Information <span className="text-sm font-normal">(Optional)</span>
+        </h2>
+
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+            <div>
+              <label className="block text-gray-700">Email:</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email || ''}
+                onChange={handleChange}
+                placeholder="Enter email"
+                className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700">Password:</label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password || ''}
+                onChange={handleChange}
+                placeholder="Enter password"
+                className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+              />
+            </div>
           </div>
         </div>
 

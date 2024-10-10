@@ -15,22 +15,23 @@ import Announcement from "./pages/Announcement";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<RootLayout />}>
-        <Route path="dashboard" element={<Dashboard />} /> 
-        <Route path="members" element={<Members />} /> 
-        <Route path="membership" element={<Membership />} />
-        <Route path="file-maintenance" element={<FileMaintenance />} />
-        <Route path="maintenance" element={<Maintenance />} /> 
-        <Route path="investment-savings" element={<InvestmentSavings />} />
-        <Route path="loan" element={<Loan />} /> 
-        <Route path="report" element={<Report />} />
-        <Route path="users" element={<Users />} />
-        <Route path="announcement" element={<Announcement />} />
-
-
-        <Route path="*" element={<NotFoundPage />} /> 
-      </Route>
+        <Route path="/" element={<RootLayout />}>
+          <Route path="/" element={<Dashboard />} /> 
+          <Route path="members" element={<Members />} />
+          <Route path="membership" element={<Membership />} />
+          <Route path="file-maintenance" element={<FileMaintenance />} />
+          <Route path="maintenance" element={<Maintenance />} />
+          <Route path="investment-savings" element={<InvestmentSavings />} />
+          <Route path="loan" element={<Loan />} />
+          <Route path="report" element={<Report />} />
+          <Route path="users" element={<Users />} />
+          <Route path="announcement" element={<Announcement />} />
+          <Route path="*" element={<NotFoundPage />} />  
+        </Route>
     </Routes>
+
+
+  
   );
 }
 

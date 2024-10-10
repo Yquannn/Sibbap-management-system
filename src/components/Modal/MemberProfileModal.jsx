@@ -7,7 +7,7 @@ const MembershipInformationModal = ({ member, onClose }) => {
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50">
       <div className="bg-white p-8 rounded-lg shadow-lg overflow-auto">
-        <div className="flex justify-end mb-2">
+        <div className="flex justify-end">
           <button
             onClick={onClose}
             className="text-red-500 text-2xl font-bold"
@@ -76,14 +76,31 @@ const MembershipInformationModal = ({ member, onClose }) => {
           </div>
         </div>
 
-        <div className="flex justify-between mt-8 space-x-4">
+        <hr className="border-t border-solid border-gray-400 my-4" />
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold mb-4">Account Information</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <p className="font-bold">Email:</p>
+              <p>{member.email}</p>
+            </div>
+            <div>
+              <p className="font-bold">Password:</p>
+              <p>{member.password}</p>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="flex justify-between mt-8 space-x-4">
           <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 w-full">
             Apply for Investment
           </button>
           <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">
             Apply for Loan
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

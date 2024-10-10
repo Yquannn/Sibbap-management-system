@@ -9,7 +9,7 @@ const SideBar = () => {
       <ul className="mt-10">
         <li className="mb-6 flex items-center">
           <FaTachometerAlt className="mr-2 text-gray-700" />
-          <a href="dashboard" className="text-gray-700 hover:text-blue-500">Dashboard</a>
+          <a href="/" className="text-gray-700 hover:text-blue-500">Dashboard</a>
         </li>
         {/* <li className="mb-4 flex items-center">
           <FaUsers className="mr-2 text-gray-700" />
